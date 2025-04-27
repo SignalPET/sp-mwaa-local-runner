@@ -16,6 +16,7 @@ services:
       - "${PWD}/requirements:/usr/local/airflow/requirements"
     ports:
       - "8080:8080"
+      - "8001:8001"
     command: webserver
     healthcheck:
       test: ["CMD-SHELL", "[ -f /usr/local/airflow/airflow-webserver.pid ]"]
